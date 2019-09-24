@@ -1,6 +1,6 @@
 {
   "name": "@danieldietrich/github-license",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Open source license generator based on GitHub APIs",
   "keywords": [
     "github-license",
