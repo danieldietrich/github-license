@@ -1,4 +1,4 @@
-import * as githubLicense from '..';
+import * as githubLicense from '.';
 
 describe('List of licenses', () => {
 
