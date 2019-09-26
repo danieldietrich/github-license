@@ -1,4 +1,4 @@
-import githubLicense from '.';
+import * as githubLicense from '..';
 
 describe('List of licenses', () => {
 
@@ -12,9 +12,8 @@ describe('List of licenses', () => {
 describe('MIT license', () => {
 
     test('Should load MIT license', async () => {
-        await expect(githubLicense('MIT')).resolves.toMatch(/^MIT License/);
+        expect(await githubLicense('MIT')).toMatch(/^MIT License/);
     });
-
 });
 
 describe('Non-existing license', () => {
@@ -26,5 +25,4 @@ describe('Non-existing license', () => {
     test('Should fail when request path contains unescaped characters', async () => {
         await expect(githubLicense('💩')).rejects.toThrowError(Error('Request path contains unescaped characters'));
     });
-
 });
